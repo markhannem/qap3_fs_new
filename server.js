@@ -14,9 +14,9 @@ app.set("view engine", "ejs");
 // app.set("views", path.resolve(__dirname), "views/ejs");
 
 // load assets
-app.use("/css", express.static(path.resolve(__dirname, "assests/css")));
-app.use("/img", express.static(path.resolve(__dirname, "assests/img")));
-app.use("/js", express.static(path.resolve(__dirname, "assests/js")));
+app.use("/css", express.static(path.resolve(__dirname, "assets/css")));
+app.use("/img", express.static(path.resolve(__dirname, "assets/img")));
+app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 
 // log
 app.use(morgan("tiny"));
@@ -27,6 +27,14 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   // res.send("Testing Server");
   res.render("index");
+});
+
+app.get("/add-emp", (req, res) => {
+  res.render("add_emp");
+});
+
+app.get("/update-emp", (req, res) => {
+  res.render("update_emp");
 });
 
 app.listen(PORT, () => {
