@@ -24,18 +24,9 @@ app.use(morgan("tiny"));
 // body-parser
 app.use(bodyparser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  // res.send("Testing Server");
-  res.render("index");
-});
+// loading routers
 
-app.get("/add-emp", (req, res) => {
-  res.render("add_emp");
-});
-
-app.get("/update-emp", (req, res) => {
-  res.render("update_emp");
-});
+app.use("/", require("./server/routes/router"));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
