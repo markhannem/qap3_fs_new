@@ -1,0 +1,27 @@
+<!-- include header -->
+<%- include('partials/_header') %>
+<!-- /include header -->
+
+<!-- Main -->
+<main id="site-main">
+  <div class="container">
+    <div class="box-nav d-flex justify-between">
+      <div class="filter">
+        <a href="/">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i> All
+          Employees</a
+        >
+      </div>
+    </div>
+    <div class="form-title text-center">
+      <h2 class="text-dark">New Employee</h2>
+      <span class="text-light">Add a new employee using this form</span>
+    </div>
+    <!-- add employee form -->
+    <%- include('partials/_form')%>
+  </div>
+</main>
+
+<!-- include footer -->
+<%- include('partials/_footer')%>
+<!-- /include footer -->

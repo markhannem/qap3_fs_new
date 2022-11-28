@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Database</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <nav>
+        <div class="container">
+          <div class="text-center">
+            <a href="/" class="nav-title text-dark"
+              >Employee Management System</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main id="site-main">
+      <div class="container">
+        <div class="box-nav d-flex justify-between">
+          <div class="filter">
+            <a href="/">
+              <i class="fa fa-angle-double-left" aria-hidden="true"></i> All
+              Employees</a
+            >
+          </div>
+        </div>
+        <div class="form-title text-center">
+          <h2 class="text-dark">New Employee</h2>
+          <span class="text-light">Add a new employee using this form</span>
+        </div>
+        <!-- Form -->
+        <form method="POST" id="update-employee">
+          <div class="new-employee">
+            <div class="form-group">
+              <label for="name" class="text-light">Name</label>
+              <input type="hidden" name="id" value="" />
+              <input type="text" name="name" />
+            </div>
+            <div class="form-group">
+              <label for="job" class="text-light">Job Title</label>
+              <input type="text" name="job" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="text-light">Email</label>
+              <input type="text" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="status" class="text-light">Status</label>
+              <div class="radio inline">
+                <input
+                  type="radio"
+                  id="radio-btn"
+                  name="status"
+                  value="Active"
+                />
+                <label for="radio-btn" class="radio-label">Active</label>
+              </div>
+              <div class="radio inline">
+                <input
+                  type="radio"
+                  id="radio-btn2"
+                  name="status"
+                  value="Inactive"
+                />
+                <label for="radio-btn2" class="radio-label">Inactive</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn text-dark update">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
