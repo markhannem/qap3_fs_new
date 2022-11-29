@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const bodyparser = require("body-parser");
 const path = require("path");
 
+const connectDB = require("./server/db/connection");
+
 const app = express();
 
 dotenv.config({ path: "config.env" });
@@ -20,6 +22,9 @@ app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 
 // log
 app.use(morgan("tiny"));
+
+//mongodb connection
+connectDB();
 
 // body-parser
 app.use(bodyparser.urlencoded({ extended: true }));
