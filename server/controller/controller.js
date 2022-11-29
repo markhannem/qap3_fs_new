@@ -25,7 +25,7 @@ exports.create = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "An error occurred",
+        message: err.message || "An error occurred creating employee entry",
       });
     });
 };
@@ -48,10 +48,79 @@ exports.create = (req, res) => {
 // };
 
 // fetch employee(s)
-exports.find = (req, res) => {};
+exports.find = (req, res) => {
+  // fetch a single employee
+  if (req.query.id) {
+    const id = req.query.id;
+
+    Employeedb.findById(id)
+      .then((data) => {
+        if (!data) {
+          res.status(404).send({ message: "User not found with the id:" + id });
+        } else {
+          res.send(data);
+        }
+      })
+      .catch((err) => {
+        res
+          .status(500)
+          .send({ message: "Error retrieving employee with id" + id });
+      });
+  } else {
+    // fetch all employees
+    Employeedb.find()
+      .then((employee) => {
+        res.send(employee);
+      })
+      .catch((err) => {
+        res
+          .status(500)
+          .send({
+            message: err.message || "An error occurred finding employee",
+          });
+      });
+  }
+};
 
 // update by employee id
-exports.update = (req, res) => {};
+exports.update = (req, res) => {
+  if (!req.body) {
+    return res.status(400).send({ message: "Update field cannot be empty" });
+  }
+
+  const id = req.params.id;
+  Employeedb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({ message: `Employee:${id} cannot be updated` });
+      } else {
+        res.send(data);
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({ message: "Error updating employee information" });
+    });
+};
 
 // delete an employee
-exports.delete = (req, res) => {};
+exports.delete = (req, res) => {
+  const id = req.params.id;
+
+  Employeedb.findByIdAndDelete(id)
+    .then((data) => {
+      if (!data) {
+        res
+          .status(404)
+          .send({ message: `Cannot delete employee ${id}. Please check id` });
+      } else {
+        res.send({
+          message: "Employee was deleted successfully",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Cannot delete employee" + id,
+      });
+    });
+};
