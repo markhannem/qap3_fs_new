@@ -1,19 +1,24 @@
+<% for (var i = 0; i< employees.length; i++) { %>
 <tr>
-  <td>1</td>
-  <td>Steve Rogers</td>
-  <td>Senior Programmer</td>
-  <td>S_Rogers@gmail.com</td>
-  <td>Active</td>
+  <td><%= i + 1 %></td>
+  <td><%= employees[i].name %></td>
+  <td><%= employees[i].job %></td>
+  <td><%= employees[i].email %></td>
+  <td><%= employees[i].status %></td>
   <td>
-    <a href="/update-emp" class="btn border-shadow update">
+    <a
+      href="/update-emp?id=<%= employees[i]._id %>"
+      class="btn border-shadow update"
+    >
       <span class="text-gradient"
         ><i class="fa fa-pencil" aria-hidden="true"></i
       ></span>
     </a>
-    <a class="btn border-shadow delete">
+    <a class="btn border-shadow delete" data-id="<%= employees[i]._id %>">
       <span class="text-gradient"
         ><i class="fa fa-times" aria-hidden="true"></i
       ></span>
     </a>
   </td>
 </tr>
+<% }%>

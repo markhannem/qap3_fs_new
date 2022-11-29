@@ -21,7 +21,8 @@ exports.create = (req, res) => {
 
   Employee.save(Employee)
     .then((data) => {
-      res.send(data);
+      // res.send(data);
+      res.redirect("/add-emp");
     })
     .catch((err) => {
       res.status(500).send({
@@ -73,11 +74,9 @@ exports.find = (req, res) => {
         res.send(employee);
       })
       .catch((err) => {
-        res
-          .status(500)
-          .send({
-            message: err.message || "An error occurred finding employee",
-          });
+        res.status(500).send({
+          message: err.message || "An error occurred finding employee",
+        });
       });
   }
 };
