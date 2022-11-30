@@ -8,7 +8,6 @@ var schema = new mongoose.Schema({
   job: {
     type: String,
     required: true,
-    unique: true,
   },
   email: {
     type: String,
