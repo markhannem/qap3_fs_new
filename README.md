@@ -33,7 +33,7 @@ password: keyin
 ============================================================================
 Postman
 
-REPLACE ID with the employee id from the database
+REPLACE "ID" with the employee id from the database
 
 GET- all employees
 http://localhost:3000/api/employees
@@ -41,7 +41,7 @@ http://localhost:3000/api/employees
 -- send
 
 GET- single employee
-http://localhost:3000/api/employees?id=ID
+http://localhost:3000/api/employees?id="ID"
 
 -- send
 
@@ -54,7 +54,7 @@ http://localhost:3000/api/employees
 -- send
 
 PUT
-http://localhost:3000/api/employees?id=ID
+http://localhost:3000/api/employees?id="ID"
 
 -- make sure you are in: body -> x-www-form-urlencoded
 -- then make keys: name, job, email, status
@@ -63,7 +63,7 @@ http://localhost:3000/api/employees?id=ID
 -- send
 
 DELETE
-http://localhost:3000/api/employees?id=ID
+http://localhost:3000/api/employees?id="ID"
 
 --send
 
