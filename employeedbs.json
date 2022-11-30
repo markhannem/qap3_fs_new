@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "63857ba18b7aab1d1a4640d5"
+  },
+  "name": "Tony Stark",
+  "job": "Iron Man",
+  "email": "ironman@gmail.com",
+  "status": "Active",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63864788444d49807fa4bdef"
+  },
+  "name": "Black Widow",
+  "job": "Assassin",
+  "email": "blkwidow@gmail.com",
+  "status": "Active",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638647aa444d49807fa4bdf1"
+  },
+  "name": "Thor",
+  "job": "Strongest Avenger",
+  "email": "hammertime@gmail.com",
+  "status": "Active",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63865c0db1ea42acd99fa724"
+  },
+  "name": "Bruce Banner",
+  "job": "Lead Scientist",
+  "email": "hulk123@gmail.com",
+  "status": "Inactive",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63876831fa294afd0c0fd03d"
+  },
+  "name": "Test",
+  "job": "Coder",
+  "email": "test@gmail.com",
+  "status": "Active",
+  "__v": 0
+}]
