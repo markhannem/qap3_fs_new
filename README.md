@@ -9,7 +9,7 @@ We were tasked with creating a RESTful API with Node, Express, EJS, and postgreS
 
 I chose to use MongoDB Atlas
 
-=========================================================================
+============================================================================
 MAKE SURE TO TYPE: npm i || IN THE TERMINAL TO INSTALL NODE MODULES
 
 Start program:
@@ -20,7 +20,7 @@ End Program:
 
 Ctrl + C
 
-=========================================================================
+============================================================================
 MongoDB
 
 database: KEYIN COLLEGE > QAP3
@@ -30,7 +30,7 @@ password: keyin
 
 .json file is also available on the GitHub repo
 
-=========================================================================
+============================================================================
 Postman
 
 REPLACE <id> with the employee id from the database
@@ -67,7 +67,7 @@ http://localhost:3000/api/employees?id=<id>
 
 --send
 
-=========================================================================
+============================================================================
 My Version of QAP3 
 
 This is an assignment for my Fullstack Class at Keyin College
