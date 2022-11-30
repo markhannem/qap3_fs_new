@@ -27,6 +27,8 @@ database: KEYIN COLLEGE > QAP3
 User: mark
 password: keyin
 
+.json file is also available on the GitHub repo
+
 ===============================================================================================
 Postman
 
