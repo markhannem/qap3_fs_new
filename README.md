@@ -1,4 +1,5 @@
 # qap3_fs_new
+ Using-Api-in-browser
 
 My Version of QAP3
 
@@ -67,3 +68,11 @@ http://localhost:3000/api/employees?id=<id>
 --send
 
 ===============================================================================================
+=======
+My Version of QAP3 
+
+This is an assignment for my Fullstack Class at Keyin College
+
+We were tasked with creating a RESTful API with Node, Express, EJS, and postgreSQL/MongoDB
+
+ main
