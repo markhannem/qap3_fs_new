@@ -59,7 +59,7 @@ a {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #3570a8, #0c3053);
+  background: linear-gradient(to right, #3570a8, #021324);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,6 +71,7 @@ a {
   width: 100%;
   font-size: 2em;
   font-weight: bold;
+  border-bottom: 5px solid #2b2d42;
 }
 
 #site-main {
@@ -107,7 +108,7 @@ table {
 }
 
 .table tr:hover {
-  background-color: #2c7e7e;
+  background-color: #3fbe9f;
 }
 
 .table tr:hover td > a {
